@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandwich Research Main Page</title>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Research Page</h1>
+        <img src="cutting_board_sandwich.jpg" id="sandwich">
+    </header>
+    <form id="new-user-form">
+        <label>Name</label>
+        <input type="text" name="name" id="name" placeholder="name">
+        <br>
+        <label>Email</label>
+        <input type="email" name="email" id="email" placeholder="email">
+        <br>
+        <label>Age</label>
+        <input type="text" name="age" id="age" placeholder="age">
+        <br>
+        <label>Gender</label>
+        <select>
+            <option value = "male">Male</option>
+            <option value = "female">Female</option>
+            <option value = "other">Other</option>
+        </select>
+        <br>
+        <!-- <label>Gender</label>
+        <input type="text" name="gender" id="gender" placeholder="gender">
+        <br> -->
+        <label>Zipcode</label>
+        <input type="text" name="zipcode" id="zipcode" placeholder="zipcode">
+        <br>
+        <label>Password</label>
+        <input type="password" name="password" id="password" placeholder="password">
+        <br>
+        <label>How likely are you to order delivery?</label>
+        <select>
+            <option value = "very-likely">Very Likely</option>
+            <option value = "somewhat-likely">Somewhat Likely</option>
+            <option value = "not-likely">Not Likely</option>
+        </select>
+        <!-- <input type="text" name="delivery_likeliness" id="delivery_likeliness" placeholder="delivery_likeliness"> -->
+        <br>
+        <label>What price range would you be willing to pay for a delivered sandwich?</label>
+        <select>
+            <option value = "5-8">$5 to $8</option>
+            <option value = "8-11">$8 to $11</option>
+            <option value = "11-14">$11 to $14</option>
+        </select>
+        <br>
+        <!-- <input type="text" name="price_range" id="price_range" placeholder="price_range"> -->
+        <input type="submit" value="Add Me!">
+
+    </form>
+
+    <a href="sandwich.html">Sandwich Page</a>
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
