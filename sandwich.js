@@ -1,4 +1,7 @@
 console.log("hello")
+localStorage.setItem("choicesMade", 1)
+
+const voteContainer = document.getElementById('vote-container')
 
 function getSandwiches() {
 fetch('http://localhost:3000/sandwiches')
@@ -17,7 +20,7 @@ console.log(sandwichCardContainer)
 
 
 function createSandwichCard(sandwich) {
-    console.log(sandwich)
+    // console.log(sandwich)
     
     const sandwichCard = document.createElement('div')
     sandwichCard.setAttribute('draggable', 'true')
@@ -30,16 +33,56 @@ function createSandwichCard(sandwich) {
     const name = document.createElement('h4')
     const description = document.createElement('p')
 
-    // const button = document.createElement('button')
-    // button.innerHTML = "Add to Favorites"
+    const vote = document.createElement('button')
+    vote.innerHTML = 'Add this to your menu!'
+    vote.addEventListener('click', onClick) 
 
     name.innerText = sandwich.name
     description.innerText = sandwich.description
 
-    sandwichCard.append( name, description,)
+    sandwichCard.append( image, name, description, vote)
     sandwichCardContainer.append(sandwichCard)
 }
+let choicesMade = localStorage.getItem("choicesMade")
 
+function onClick() {
+    
+    if (choicesMade == 3) 
+    {window.alert("Thank you for your very thoughtful feed...back! We look forward to meeting you soon!")}
+    
+//     {const threeLeft = document.createElement('p')
+//     threeLeft.textContent = "Three choices left"
+//     document.getElementById('vote-container').append(threeLeft)
+//     // console.log(document.getElementById('vote-container')
+// }
+    
+
+//     else if (choicesMade == 1)
+//     {const twoLeft = document.createElement('p')
+//     twoLeft.textContent = "Two choices left"
+//     document.getElementById('vote-container').replaceWith(twoLeft)} 
+    
+//     else if(choicesMade == 2)
+//     {const oneLeft = document.createElement('p')
+//     oneLeft.textContent = "One choice left"
+//     document.getElementById('vote-container').replaceWith(oneLeft)} 
+    
+//     else if(choicesMade == 3)
+//     {const zeroLeft = document.createElement('p')
+//     zeroLeft.textContent = "No choices left"
+//     document.getElementById('vote-container').replaceWith(zeroLeft)
+//     window.alert('No more choices')} 
+    
+//     console.log(choicesMade)
+    console.log(choicesMade)
+    choicesMade = parseInt(choicesMade) +1;
+    localStorage.setItem("choicesMade", choicesMade )
+    }
+
+    // function threeLeft() {
+        
+        
+    // }
 
 
 const newSandwichForm = document.getElementById('new-sandwich-form')
@@ -52,14 +95,14 @@ newSandwichForm.addEventListener('submit', event => {
     const description = formData.get('description')
 
 
-fetch("http://localhost:3000/sandwiches", {
+fetch("http://localhost:3000/suggestions", {
         method: "POST",
         headers: {
             "Accept": "application/json",
             "Content-Type": "application/json"
             },
         body: JSON.stringify({
-            sandwich: {
+            suggestion: {
                 name: name,
                 url: url,
                 description: description

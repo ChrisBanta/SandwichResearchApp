@@ -47,24 +47,33 @@ table {
 	border-spacing: 0;
 }
 
+
+/*  */
+
 body {
     background-color: #ABAC7F;
+    background-image: url("cuttingboard.jpg");
+    background-size: cover;
     
 }
+
+form {}
 
 
 
 .sandwich-card {
-    color: white;
+    /* display: inline; */
+    color: black;
     width: 200px;
     height: 200px;
     margin: 10px;
-    background-color: #823B10;
+    background-color: #56BC25;
     border-radius: 5%;
     box-shadow: 0 4px 10px grey;
     padding: 10px;
     background-image: url("lettucecrop.png");
     background-size: 100px 100px;
+    text-align: center;
 }
 
 
@@ -74,6 +83,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin: auto;
 }
 
 #choices-container {
@@ -91,12 +101,26 @@ div {
 
 h1 {
     font-family: 'Roboto Slab', serif;
-    font-size: 60px;
+    font-size: 50px;
+    color: #075209;
+    text-align: center;
+    text-shadow: 2px 2px #E3E3E2;
 }
 
 h4 {
     font-family: 'Roboto Slab', serif;
     font-size: 20px;
+}
+#sandwich-h4 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+h5{
+    font-family: 'Roboto Slab', serif;
+    font-size: 15px;
 }
 
 p {
@@ -112,7 +136,7 @@ label {
 select {
     font-family: 'Roboto Slab', serif;
     font-size: 14px;
-    background-color: indianred;
+    background-color: #E3E3E2;
 }
 
 
@@ -132,7 +156,7 @@ input{
   resize: vertical;
   font-family: 'Roboto Slab', serif;
   font-size: 14px;
-  background-color: indianred;
+  background-color: #E3E3E2;
     
 }
 
@@ -146,14 +170,16 @@ label {
   }
 
   header{
-      height: 10vw;
-      background-color: hsl(19, 59%, 29%);
-      background-image: url("cutting_board_sandwich.jpg");
+      height: 8vw;
+      /* background-color: hsl(19, 59%, 29%);
+      background-image: url("cutting_board_sandwich.jpg"); */
   }
 
   footer {
-    height: 10vw;
-    background-color: hsl(19, 59%, 29%);
+    height: 25px;
+    /* background-color: hsl(19, 59%, 29%); */
+    padding: 10px;
+    text-align: center;
   }
 
   #sandwich {
@@ -161,16 +187,134 @@ label {
   }
 
   #cardpic {
-      width: 150px;
+      width: 180px;
+      height: 100px;
   }
 
   #choice1, #choice2, #choice3 {
     float: left;
-    width: 200px;
-    height: 200px;
+    width: 210px;
+    height: 210px;
     margin: 10px;
     padding: 10px;
     border: 1px solid black;
     border-radius: 5%;
     box-shadow: 0 4px 10px grey;
   }
+
+
+    #form-container {
+        width: 500px;
+        display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* border-style: solid;
+    border-width: 2px;
+    border-color: black; */
+    /* margin-left:15%; 
+    margin-right:15%; */
+    margin: auto;
+    }
+
+    #intro-container {
+        width: 837px;
+        display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* border-style: solid;
+    border-width: 2px;
+    border-color: black; */
+    /* margin-left:15%; 
+    margin-right:15%; */
+    /* align-items: center; */
+    margin: auto;
+    margin-bottom: 5px;
+    }
+
+    #sandwich-form-container {
+        display: flex;
+        /* justify-content: space-between; */
+        justify-content: center;
+    margin: auto;
+    margin-top: 30px;
+    }
+
+    #new-sandwich-form {
+        display: flex;
+    }
+
+    #add-sandwich-question {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        margin-top: 15px;
+    }
+
+    button {
+        background-color: #E3E3E2;
+        font-family: 'Roboto Slab', serif;
+        margin-top: 3px;
+    }
+
+    nav {
+        display: flex;
+        height: 30px;
+        background-color: #E3E3E2;
+        opacity: 70%;
+        list-style: none;
+        text-align: center;
+        justify-content: space-around;
+    }
+
+    nav li {
+        /* display: flex; */
+        font-family: 'Roboto Slab', serif;
+        font-size: 1em;
+        line-height: 20px;
+        height: 20px;
+        display: inline-block;
+        margin: 0 6.5rem;
+        
+        
+
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #075209;
+    }
+
+    nav a:hover {
+        background-color: #56BC25;
+    }
+
+    nav ul {
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .form-row {
+        display: flex;
+justify-content: space-between;
+    }
+
+    #admin-summary {
+        display: flex;
+flex-direction: column;
+    }
+
+    #chamber {
+        position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 200px;
+    height: auto;
+}
+    
+
+
+
+    

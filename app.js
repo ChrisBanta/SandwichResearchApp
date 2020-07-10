@@ -43,3 +43,7 @@ newUserForm.addEventListener('submit', event => {
 
     })
 })
+
+var redirect = function() {
+    document.location.href="sandwich.html"
+}
